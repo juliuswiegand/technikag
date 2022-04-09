@@ -4,12 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technik AG Anmeldung</title>
     <link rel="stylesheet" href="style.css">
+    <title>Technik AG - Buchung</title>
 </head>
 <body>
-    <h1>Technik AG - Buchung</h1>
-    <br>
-    <p>Herzlich Willkommen auf der Seite der Technik AG</p>
+    <header>
+        <h1>TECHNIK AG - Buchung</h1>
+        <img src="taglogo.svg" alt="Logo der Technik AG">
+    </header>
+
+    <main>
+        <form action="dankefuerssenden.html">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="_name">
+
+            <br>
+
+            <input type="radio" id="_problem" name="anlass" value="problem">
+            <label for="_problem">Problem oder Defekt melden</label>
+
+            <input type="radio" id="_unterstuetzung" name="anlass" value="unterstuetzung">
+            <label for="_problem">Unterstützung in der Aula benötigt</label>
+
+            <input type="radio" id="_equipment" name="anlass" value="equipment">
+            <label for="_problem">Equipment ausleihen</label>
+            
+            <section class="problemform">
+                <label for="raum">Raum: </label>
+                <input type="number" name="raum" id="_raum">
+
+                <label for="geraet">Gerät: </label>
+                <select name="geraet" id="_geraet">
+                    <option value="appletv">Apple TV</option>
+                    <option value="beamer">Beamer</option>
+                    <option value="verbindung">Verbindung zu Beamer</option>
+                </select>
+                
+                <label for="beschreibungproblem">Kurze Beschreibung des Problems:</label>
+                <textarea name="beschreibungproblem" id="_beschreibungproblem" cols="30" rows="10"></textarea>
+
+                <label for="deadline">Deadline (wenn vorhanden):</label>
+                <input type="date" name="deadline" id="_deadline">
+            </section>
+
+            <section class="equipmentform">
+                <label for="ort">Für welchen Ort:</label>
+                <input type="text" name="ort" id="_ort">
+
+                <label for="equipment">Welches Equipment? </label>
+                <select name="equipment" id="_equipment">
+                    <option value="soundanlage">Soundanlage</option>
+                    <option value="halos">Halogenstrahler</option>
+                    <option value="kabel">Kabel</option>
+                </select>
+
+                <label for="grundfuerausleihe">Wofür wird das Equipment benötigt?</label>
+                <textarea name="grundfuerausleihe" id="_grundfuerausleihe" cols="30" rows="10"></textarea>
+            </section>
+        </form>
+    </main>
 </body>
 </html>
