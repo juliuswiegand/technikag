@@ -9,9 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>TECHNIK AG - Buchung</h1>
-        <img src="taglogo.svg" alt="Logo der Technik AG">
+        <h1 class="title">TECHNIK AG - Buchung</h1>
+        <img src="taglogo.svg" alt="Logo der Technik AG" class="logo">
     </header>
+
+    <br class="biggerbreak">
 
     <main>
         <form action="dankefuerssenden.html">
@@ -22,46 +24,56 @@
 
             <input type="radio" id="_problem" name="anlass" value="problem">
             <label for="_problem">Problem oder Defekt melden</label>
-
+            <br>
             <input type="radio" id="_unterstuetzung" name="anlass" value="unterstuetzung">
             <label for="_problem">Unterstützung in der Aula benötigt</label>
-
+            <br>
             <input type="radio" id="_equipment" name="anlass" value="equipment">
             <label for="_problem">Equipment ausleihen</label>
-            
+            <br class="biggerbreak">
+
             <section class="problemform">
+                <h1>Problem oder Defekt melden:</h1>
+
                 <label for="raum">Raum: </label>
                 <input type="number" name="raum" id="_raum">
-
+                <br>
                 <label for="geraet">Gerät: </label>
                 <select name="geraet" id="_geraet">
                     <option value="appletv">Apple TV</option>
                     <option value="beamer">Beamer</option>
                     <option value="verbindung">Verbindung zu Beamer</option>
                 </select>
-                
+                <br>
                 <label for="beschreibungproblem">Kurze Beschreibung des Problems:</label>
+                <br>
                 <textarea name="beschreibungproblem" id="_beschreibungproblem" cols="30" rows="10"></textarea>
-
+                <br>
                 <label for="deadline">Deadline (wenn vorhanden):</label>
                 <input type="date" name="deadline" id="_deadline">
             </section>
 
-            <section class="equipmentform">
+            <br class="biggerbreak">
+
+            <section class="equipmentform">   
+                <h1>Equipment ausleihen:</h1>  
+                          
                 <label for="ort">Für welchen Ort:</label>
                 <input type="text" name="ort" id="_ort">
-
+                <br>
                 <label for="equipment">Welches Equipment? </label>
                 <select name="equipment" id="_equipment">
                     <option value="soundanlage">Soundanlage</option>
                     <option value="halos">Halogenstrahler</option>
                     <option value="kabel">Kabel</option>
                 </select>
-
+                <br>
                 <label for="grundfuerausleihe">Wofür wird das Equipment benötigt?</label>
+                <br>
                 <textarea name="grundfuerausleihe" id="_grundfuerausleihe" cols="30" rows="10"></textarea>
             </section>
         </form>
     </main>
+
 </body>
 </html>
