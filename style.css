@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+
 .logo {
     width: 80pt;
     height: auto;
@@ -20,6 +21,12 @@ br.biggerbreak {
     height:3em;
 }
 
+br.semibreak {
+    content: "";
+    display: block;
+    height:1em;
+}
+
 h1.title {
     font-size: 45px;
 }
@@ -30,9 +37,74 @@ h1 {
 
 label {
     font-size: 18pt;
+    margin-bottom: 10px;
 }
 
 textarea {
     resize: none;
 }
 
+input {
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+}
+
+.thumbnail {
+    width: 100pt;
+    height: auto;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+input[type=submit] {
+    width: 300pt;
+    border-radius: 0px;
+    background-color: #b61c28;
+    color: white;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type=submit]:hover {
+    width: 310pt;
+    border-radius: 0px;
+    background-color: #c24b55;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=radio]:hover {
+    cursor: pointer;
+}
+
+input:hover  {
+    cursor: pointer;
+}
