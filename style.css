@@ -51,6 +51,7 @@ input {
     transition: background-color 0.2s ease-in-out;
     font-size: 20px;
     margin-bottom: 10px;
+
 }
 
 select {
@@ -107,4 +108,63 @@ input[type=radio]:hover {
 
 input:hover  {
     cursor: pointer;
+}
+
+section {
+    background-color: rgb(230, 230, 230);
+    margin: -20pt;
+    padding-left: 20pt;
+    padding-bottom: 20pt;
+    padding-top: 1pt;
+}
+
+p {
+    font-size: 20px;
+}
+
+p.privacy {
+    font-size: 15px;
+    font-style: italic;
+}
+
+a {
+    background-color: #b61c28;
+    color: white;
+    text-decoration: none;
+    padding: .5em;
+    font-size: 18px;
+}
+
+a:hover {
+    background-color: #c53742;
+    color: white;
+    text-decoration: none;
+    padding: .5em;
+    font-size: 18px;
+}
+
+section.terminbox {
+    margin: 0pt;
+    padding-right: 40pt;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 20;
+    right: 0;
+    
+}
+
+section.lichtsection {
+    padding-top: 1pt;
+    background-color: rgb(192, 192, 192);
+}
+
+section.tonsection {
+    padding-top: 1pt;
+    background-color: rgb(192, 192, 192);
+}
+
+section.praesisection {
+    padding-top: 1pt;
+    background-color: rgb(192, 192, 192);
 }

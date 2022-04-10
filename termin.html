@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technik AG - Termin buchen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">Termin vereinbaren</h1>
+    <br class="biggerbreak">
+    <form action="https://formsubmit.co/julius.wiegand03@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="http://192.168.178.78:5500/dankefuerssenden.html">
+        <input type="hidden" name="_subject" value="Termin Vereinbarung">
+        <input type="hidden" name="_template" value="box">
+
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="_name" required>
+        <br>
+        <label for="email">E-Mail: </label>
+        <input type="text" name="email" id="_email" required>
+        <br class="semibreak">
+        <label for="gespraechsort">Wo soll das Gespräch stattfinden?</label>
+        <br>
+        <input type="radio" name="gespraechsort" id="_gespraechsort" value="googlemeet">
+        <label for="googlemeet">Google Meet (Videokonferenz)</label>
+        <br>
+        <input type="radio" name="gespraechsort" id="_persoenlich" value="persoenlichesgespraech">
+        <label for="googlemeet">Persönliches Gespräch</label>
+        <br>
+        <input type="radio" name="gespraechsort" id="_schriftlich" value="schriftlich">
+        <label for="googlemeet">Schriftliche Beratung</label>
+        <br class="semibreak">
+        <label for="beschreibung">Beschreiben Sie kurz ihr Anliegen damit wir uns vorbereiten können:</label>
+        <br>
+        <textarea name="beschreibung" id="_beschreibung" cols="30" rows=5"></textarea>
+        <br>
+
+        <label for="uhrzeit">Falls Sie ein Gespräch wünschen geben Sie hier einen Terminwunsch an: </label>
+        <br class="semibreak">
+        <label for="tag">Tag:</label>
+        <input type="date" name="date" id="_date">
+        <br>
+        <label for="uhrzeit">Uhrzeit:</label>
+        <input type="time" name="uhrzeit" id="_uhrzeit">
+
+        <br class="biggerbreak">
+        <input type="submit">
+        <p class="privacy">*um das Formular an uns weiterzuleiten nutzen wir den Dienst "formsubmit.co". Diese sammeln keine personenbezogenen Daten. Nähre Infos können hier nachgelesen werden: "https://formsubmit.co/privacy.pdf"</p>
+    </form>
+</body>
+</html>

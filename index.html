@@ -11,6 +11,11 @@
     <header>
         <h1 class="title">TECHNIK AG - Buchung</h1>
         <img src="images/technikaglogo.svg" alt="Logo der Technik AG" class="logo">
+        <section class="terminbox">
+            <p>Sie benötigen weitere Hilfe?</p>
+            <a href="termin.html">Termin vereinbaren</a>
+        </section>
+        
     </header>
 
     <br class="biggerbreak">
@@ -19,6 +24,7 @@
         <form action="https://formsubmit.co/a88eea89d44b7b232a21300474b8407e" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_template" value="box">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Technik AG Buchung">
             <input type="hidden" name="_next" value="http://192.168.178.78:5500/dankefuerssenden.html">
 
             <label for="name">Name: </label>
@@ -47,6 +53,7 @@
                 <br>
                 <label for="geraet">Gerät: </label>
                 <select name="geraet" id="_geraet">
+                    <option value=""></option>
                     <option value="appletv">Apple TV</option>
                     <option value="beamer">Beamer</option>
                     <option value="verbindung">Verbindung zu Beamer</option>
@@ -71,6 +78,7 @@
                 <br>
                 <label for="equipment">Welches Equipment?</label>
                 <select name="equipment" id="_equipment">
+                    <option value=""></option>
                     <option value="soundanlage">Soundanlage</option>
                     <option value="mikrofone">Mikrofone</option>
                     <option value="halos">Halogenstrahler</option>
@@ -203,15 +211,20 @@
                     <input type="radio" name="praesivorhanden" id="_praesivorhanden" value="nein">
                     <label for="praesivorhanden">Nein</label>
                     <br>
-                    <label for="praesi">Wenn eine Präsentatin bereits vorhanden ist hier Link einfügen (z.B. Google Drive, Dropbox, etc.): </label>
+                    <label for="praesi">Wenn eine Präsentation bereits vorhanden ist hier Link einfügen (z.B. Google Drive, Dropbox, etc.): </label>
                     <br>
                     <input type="text" name="praesi" id="_praesi">
                 </section>
                 
             </section>
             <br class="biggerbreak">
+            <label for="sonstiges">Sonstiges: </label>
+            <br>
+            <textarea name="sonstiges" id="_sonstiges" cols="30" rows=5"></textarea>
+            <br class="biggerbreak">
             <input type="submit">
         </form>
+        <p class="privacy">*um das Formular an uns weiterzuleiten nutzen wir den Dienst "formsubmit.co". Diese sammeln keine personenbezogenen Daten. Nähre Infos können hier nachgelesen werden: "https://formsubmit.co/privacy.pdf"</p>
     </main>
     
 </body>
