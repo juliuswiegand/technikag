@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Technik AG - Buchung</title>
+    <link rel="icon" href="images/RatsLogo.png">
 </head>
 <body>
     <header>
@@ -13,9 +14,8 @@
         <img src="images/technikaglogo.svg" alt="Logo der Technik AG" class="logo">
         <section class="terminbox">
             <p>Sie benötigen weitere Hilfe?</p>
-            <a href="termin.html">Termin vereinbaren</a>
-        </section>
-        
+            <a href="termin.html" class="terminbutton">Termin vereinbaren</a>
+        </section>       
     </header>
 
     <br class="biggerbreak">
@@ -67,8 +67,6 @@
                 <label for="deadline">Deadline (wenn vorhanden):</label>
                 <input type="date" name="deadline" id="_deadline">
             </section>
-
-            
 
             <section class="equipmentform" id="_equipmentform">   
                 <h1>Equipment ausleihen:</h1>  
@@ -197,8 +195,7 @@
                     <p>*kabelloses Mikrofon welches an Kleidung befestigt werden kann. <br>
                         Daher ist es besonders gut für Redner/Moderatoren geeignet.                                              
                     </p>
-                    <br class="biggerbreak">
-     
+                    <br class="biggerbreak">    
                 </section>
 
                 <section class="praesisection" id="_praesisection">
@@ -214,8 +211,7 @@
                     <label for="praesi">Wenn eine Präsentation bereits vorhanden ist hier Link einfügen (z.B. Google Drive, Dropbox, etc.): </label>
                     <br>
                     <input type="text" name="praesi" id="_praesi">
-                </section>
-                
+                </section>                
             </section>
             <br class="biggerbreak">
             <label for="sonstiges">Sonstiges: </label>
@@ -224,9 +220,9 @@
             <br class="biggerbreak">
             <input type="submit">
         </form>
-        <p class="privacy">*um das Formular an uns weiterzuleiten nutzen wir den Dienst "formsubmit.co". Diese sammeln keine personenbezogenen Daten. Nähre Infos können hier nachgelesen werden: "https://formsubmit.co/privacy.pdf"</p>
-    </main>
-    
+        <p class="privacy">*um das Formular an uns weiterzuleiten nutzen wir den Dienst "formsubmit.co". Diese sammeln keine personenbezogenen Daten. 
+            Nähere Infos können hier nachgelesen werden: <a class="textlink" href="https://formsubmit.co/privacy.pdf">https://formsubmit.co/privacy.pdf</a></p>
+    </main>   
 </body>
 <script src="script.js"></script>
 </html>
