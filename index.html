@@ -1,3 +1,6 @@
+<!--geschrieben von Julius Wiegand in Zusammenarbeit mit 
+    Cedric Rauer und Muhammed Cavdarci (18.04.2022, Gladbeck)-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,32 +10,45 @@
     <link rel="stylesheet" href="style.css">
     <title>Technik AG - Buchung</title>
     <link rel="icon" href="images/RatsLogo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <!--Kopfleiste und Terminvereinbarung-->
     <header>
         <h1 class="title">Technik AG - Buchungsformular</h1>
         <img src="images/technikaglogo.svg" alt="Logo der Technik AG" class="logo">
         <section class="terminbox">
             <p>Sie benötigen weitere Hilfe?</p>
+
+            <!--Weiterleitung an Terminvereinbarung-->
             <a href="termin.html" class="terminbutton">Termin vereinbaren</a>
         </section>       
     </header>
 
-    <br class="biggerbreak">
+    <p class="biggerbreak">
 
+    <!--Formular beginnt hier-->
     <main>
-        <form action="https://formsubmit.co/a88eea89d44b7b232a21300474b8407e" method="POST" enctype="multipart/form-data">
+        <form action="https://formsubmit.co/fe6714669657fa77c92091bd492cd249" method="POST" enctype="multipart/form-data">
+            
+            <!--Variablen fuer formsubmit.co-->
             <input type="hidden" name="_template" value="box">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Technik AG Buchung">
-            <input type="hidden" name="_next" value="http://192.168.178.78:5500/dankefuerssenden.html">
+            <input type="hidden" name="_next" value="https://technik.ratsgymnasium-gladbeck.de/dankefuerssenden.html">
 
+            <!--Abfrage grundsaetzlicher Informationen-->
             <label for="name">Name: </label>
             <input type="text" name="name" id="_name" required>
             <br>
             <label for="email">E-Mail: </label>
             <input type="email" name="email" id="_email" required>
 
+            <!--Grund fuer Kontakt > Funktionalität in js implementiert-->
             <br>
             <h1>Was ist Ihr Anliegen?</h1>
             <input type="radio" id="_problem" name="anlass" value="problem" onclick="blendInProblemForm()">
@@ -43,8 +59,9 @@
             <br>
             <input type="radio" id="_equipment" name="anlass" value="equipment" onclick="blendInEquipmentForm()">
             <label for="_problem">Equipment ausleihen</label>
-            <br class="biggerbreak">
+            <p class="biggerbreak">
 
+            <!--Problem/Defektmeldung-->
             <section class="problemform" id="_problemform">
                 <h1>Problem oder Defekt melden:</h1>
 
@@ -68,6 +85,7 @@
                 <input type="date" name="deadline" id="_deadline">
             </section>
 
+            <!--Equipment Ausleihe-->
             <section class="equipmentform" id="_equipmentform">   
                 <h1>Equipment ausleihen:</h1>  
 
@@ -88,6 +106,7 @@
                 <textarea name="grundfuerausleihe" id="_grundfuerausleihe" cols="30" rows="5"></textarea>
             </section>
             
+            <!--Veranstaltungsplanung-->
             <section class="veranstaltugform" id="_veranstaltungform">
                 <h1>Unterstützung in der Aula benötigt</h1>
 
@@ -109,7 +128,7 @@
                 <br>
                 <p>*maximal 25MB (viel mehr als ausreichend für die meisten PDF's)</p>
 
-                <br class="biggerbreak">
+                <p class="biggerbreak">
                 <label for="checkboxes"><b>Was wird benötigt: </b></label>
                 <br>
                 <input type="checkbox" name="licht" id="_licht" onclick="blendInLichtSection()">
@@ -120,7 +139,7 @@
                 <br>
                 <input type="checkbox" name="praesentation" id="_praesentation" onclick="blendInPraesiSection()">
                 <label for="praesentation">Beamer (Präsentation, etc. )</label>
-                <br class="biggerbreak">
+                <p class="biggerbreak">
 
                 <section class="lichtsection" id="_lichtsection">
                     <h1>Licht</h1>
@@ -129,21 +148,21 @@
                     <textarea name="lichtkonzept" id="_lichtkonzept" cols="30" rows="5"></textarea>
                     <br>
                     <label for="scheinwerfer">Welche Scheinwerfer werden benötigt?</label>
-                    <br class="semibreak">
+                    <p class="semibreak">
 
                     <input type="checkbox" name="halogenstraher" id="_halogenstrahler">
                     <label for="halogenstrahler">Halogenstrahler</label>
                     <br>
                     <img src="images/halogenstrahler.jpg" alt="Bild eines Halogenstrahlers" class="thumbnail">
                     <p>*gut geeignet für statische, einfarbige Beleuchtung</p>
-                    <br class="semibreak">
+                    <p class="semibreak">
 
                     <input type="checkbox" name="movingheads" id="_movingheads">
                     <label for="movingheads">Moving Heads</label>
                     <br>
                     <img src="images/movingheads.jpg" alt="Bild eines Movingheads" class="thumbnail">
                     <p>*gut geeignet für komplexere Lichtkonzepte die Bewegung und Farben benötigen</p>
-                    <br class="biggerbreak">
+                    <p class="semibreak">
                 </section>
 
                 <section class="tonsection" id="_tonsection">
@@ -151,23 +170,23 @@
                     <label for="tonkonzept">Für was wird der Ton benötigt (Redner, Gesang, Instrument Abnahmen, Musik, Soundeffekte):</label>
                     <br>
                     <textarea name="tonkonzept" id="_tonkonzept" cols="30" rows=5"></textarea>
-                    <br class="semibreak">
+                    <p class="semibreak">
                     <label for="mikros">Welche Mikrofone werden benötigt?</label>
-                    <br class="semibreak">
+                    <p class="semibreak">
 
                     <input type="checkbox" name="kondensatormikro" id="_kondensatormikro">
                     <label for="kondensatormikro">Kondensatormikrofone</label>
                     <br>
                     <img src="images/kondensatormikro.jpg" alt="Bild eines Rode NT 1A" class="thumbnail">
                     <p>*stationäres Mikrofon, gut für Instrument und Gruppen- und Gesangsaufnahmen <br>kabelgebunden, insgesamt 3 vorhanden)</p>
-                    <br class="semibreak">
+                    <p class="semibreak">
 
                     <input type="checkbox" name="sennheiserew100" id="_sennheiserew100">
                     <label for="sennheiserew100">Hand- Funkmikrofon</label>
                     <br>
                     <img src="images/sennheiserew100.jpg" alt="Bild eines Sennheiser EW 100" class="thumbnail">
                     <p>*kabelloses Mikrofon, gut für Solistengesang und Sprache insgesamt 2 vorhanden)</p>
-                    <br class="semibreak">
+                    <p class="semibreak">
 
                     <input type="checkbox" name="shuresm58" id="_shuresm58">
                     <label for="shuresm58">Kabelmikrofon</label>
@@ -176,7 +195,7 @@
                     <p>*kabelgebundenes Mikrofon, gut für Solistengesang und Sprache <br>
                         (insgesamt nur zwei vorhanden, Bewegung nur eingeschränkt möglich)                          
                     </p>
-                    <br class="semibreak">
+                    <p class="semibreak">
 
                     <input type="checkbox" name="c4" id="_c4">
                     <label for="c4">Kleinmembran Kondensatormikrofone</label>
@@ -186,7 +205,7 @@
                         für das Rednerpult und die Abnahme <br> von Streich- und Zupfinstrumenten 
                         (insgesamt 2 vorhanden)                                                
                     </p>
-                    <br class="semibreak">
+                    <p class="semibreak">
 
                     <input type="checkbox" name="lavalier" id="_lavalier">
                     <label for="lavalier">Lavalier</label>
@@ -195,7 +214,7 @@
                     <p>*kabelloses Mikrofon welches an Kleidung befestigt werden kann. <br>
                         Daher ist es besonders gut für Redner/Moderatoren geeignet.                                              
                     </p>
-                    <br class="biggerbreak">    
+                    <p class="biggerbreak"> 
                 </section>
 
                 <section class="praesisection" id="_praesisection">
@@ -213,11 +232,11 @@
                     <input type="text" name="praesi" id="_praesi">
                 </section>                
             </section>
-            <br class="biggerbreak">
+            <p class="biggerbreak">
             <label for="sonstiges">Sonstiges: </label>
             <br>
             <textarea name="sonstiges" id="_sonstiges" cols="30" rows=5"></textarea>
-            <br class="biggerbreak">
+            <p class="biggerbreak">
             <input type="submit">
         </form>
         <p class="privacy">*um das Formular an uns weiterzuleiten nutzen wir den Dienst "formsubmit.co". Diese sammeln keine personenbezogenen Daten. 

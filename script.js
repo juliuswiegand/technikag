@@ -1,3 +1,4 @@
+// Standardmaessiges Ausblenden der Subsections
 document.getElementById("_problemform").style.display = "none";
 document.getElementById("_equipmentform").style.display = "none";
 document.getElementById("_veranstaltungform").style.display = "none";
