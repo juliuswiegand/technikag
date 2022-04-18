@@ -3,245 +3,245 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Technik AG - Buchung</title>
-    <link rel="icon" href="images/RatsLogo.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Technik AG - Buchung</title>
+        <link rel="icon" href="images/RatsLogo.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    </head>
 
-</head>
-<body>
-    <!--Kopfleiste und Terminvereinbarung-->
-    <header>
-        <h1 class="title">Technik AG - Buchungsformular</h1>
-        <img src="images/technikaglogo.svg" alt="Logo der Technik AG" class="logo">
-        <section class="terminbox">
-            <p>Sie benötigen weitere Hilfe?</p>
+    <body>
+        <!--Kopfleiste und Terminvereinbarung-->
+        <header>
+            <h1 class="title">Technik AG - Buchungsformular</h1>
+            <img src="images/technikaglogo.svg" alt="Logo der Technik AG" class="logo">
+            <section class="terminbox">
+                <p>Sie benötigen weitere Hilfe?</p>
 
-            <!--Weiterleitung an Terminvereinbarung-->
-            <a href="termin.html" class="terminbutton">Termin vereinbaren</a>
-        </section>       
-    </header>
+                <!--Weiterleitung an Terminvereinbarung-->
+                <a href="termin.html" class="terminbutton">Termin vereinbaren</a>
+            </section>       
+        </header>
 
-    <p class="biggerbreak">
+        <p class="biggerbreak">
 
-    <!--Formular beginnt hier-->
-    <main>
-        <form action="https://formsubmit.co/fe6714669657fa77c92091bd492cd249" method="POST" enctype="multipart/form-data">
-            
-            <!--Variablen fuer formsubmit.co-->
-            <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Technik AG Buchung">
-            <input type="hidden" name="_next" value="https://technik.ratsgymnasium-gladbeck.de/dankefuerssenden.html">
+        <!--Formular beginnt hier-->
+        <main>
+            <form action="https://formsubmit.co/fe6714669657fa77c92091bd492cd249" method="POST" enctype="multipart/form-data">
+                
+                <!--Variablen fuer formsubmit.co-->
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Technik AG Buchung">
+                <input type="hidden" name="_next" value="https://technik.ratsgymnasium-gladbeck.de/dankefuerssenden.html">
 
-            <!--Abfrage grundsaetzlicher Informationen-->
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="_name" required>
-            <br>
-            <label for="email">E-Mail: </label>
-            <input type="email" name="email" id="_email" required>
+                <!--Abfrage grundsaetzlicher Informationen-->
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="_name" required>
+                <br>
+                <label for="email">E-Mail: </label>
+                <input type="email" name="email" id="_email" required>
 
-            <!--Grund fuer Kontakt > Funktionalität in js implementiert-->
-            <br>
-            <h1>Was ist Ihr Anliegen?</h1>
-            <input type="radio" id="_problem" name="anlass" value="problem" onclick="blendInProblemForm()">
-            <label for="_problem">Problem oder Defekt melden</label>
-            <br>
-            <input type="radio" id="_unterstuetzung" name="anlass" value="unterstuetzung" onclick="blendInVeranstaltungForm()">
-            <label for="_problem">Unterstützung in der Aula benötigt</label>
-            <br>
-            <input type="radio" id="_equipment" name="anlass" value="equipment" onclick="blendInEquipmentForm()">
-            <label for="_problem">Equipment ausleihen</label>
-            <p class="biggerbreak">
-
-            <!--Problem/Defektmeldung-->
-            <section class="problemform" id="_problemform">
-                <h1>Problem oder Defekt melden:</h1>
-
-                <label for="raum">Raum: </label>
-                <input type="number" name="raum" id="_raum">
+                <!--Grund fuer Kontakt > Funktionalität in js implementiert-->
                 <br>
-                <label for="geraet">Gerät: </label>
-                <select name="geraet" id="_geraet">
-                    <option value=""></option>
-                    <option value="appletv">Apple TV</option>
-                    <option value="beamer">Beamer</option>
-                    <option value="verbindung">Verbindung zu Beamer</option>
-                    <option value="dokumentenkamera">Dokumentenkamera</option>
-                </select>
+                <h1>Was ist Ihr Anliegen?</h1>
+                <input type="radio" id="_problem" name="anlass" value="problem" onclick="blendInProblemForm()">
+                <label for="_problem">Problem oder Defekt melden</label>
                 <br>
-                <label for="beschreibungproblem">Kurze Beschreibung des Problems:</label>
+                <input type="radio" id="_unterstuetzung" name="anlass" value="unterstuetzung" onclick="blendInVeranstaltungForm()">
+                <label for="_problem">Unterstützung in der Aula benötigt</label>
                 <br>
-                <textarea name="beschreibungproblem" id="_beschreibungproblem" cols="30" rows="5"></textarea>
-                <br>
-                <label for="deadline">Deadline (wenn vorhanden):</label>
-                <input type="date" name="deadline" id="_deadline">
-            </section>
-
-            <!--Equipment Ausleihe-->
-            <section class="equipmentform" id="_equipmentform">   
-                <h1>Equipment ausleihen:</h1>  
-
-                <label for="ort">Für welchen Ort:</label>
-                <input type="text" name="ort" id="_ort">
-                <br>
-                <label for="equipment">Welches Equipment?</label>
-                <select name="equipment" id="_equipment">
-                    <option value=""></option>
-                    <option value="soundanlage">Soundanlage</option>
-                    <option value="mikrofone">Mikrofone</option>
-                    <option value="halos">Halogenstrahler</option>
-                    <option value="kabel">Kabel</option>
-                </select>
-                <br>
-                <label for="grundfuerausleihe">Wofür wird das Equipment benötigt?</label>
-                <br>
-                <textarea name="grundfuerausleihe" id="_grundfuerausleihe" cols="30" rows="5"></textarea>
-            </section>
-            
-            <!--Veranstaltungsplanung-->
-            <section class="veranstaltugform" id="_veranstaltungform">
-                <h1>Unterstützung in der Aula benötigt</h1>
-
-                <label for="artderveranstaltung">Art der Veranstaltung: </label>
-                <input type="text" name="artderveranstaltung" id="_artderveranstaltung">
-                <br>
-                <label for="datum">Datum: </label>
-                <input type="date" name="datum" id="_datum">
-                <br>
-                <label for="startzeit">Startzeit: </label>
-                <input type="time" name="startzeit" id="_startzeit">
-                <br>
-                <label for="endzeit">Endzeit: </label>
-                <input type="time" name="endzeit" id="_endzeit">
-                <br>
-                <label for="skript">Falls vorhanden, bitte eine Skript der Veranstaltung hier hochladen:</label>
-                <br>
-                <input type="file" name="skript" id="_skript">
-                <br>
-                <p>*maximal 25MB (viel mehr als ausreichend für die meisten PDF's)</p>
-
-                <p class="biggerbreak">
-                <label for="checkboxes"><b>Was wird benötigt: </b></label>
-                <br>
-                <input type="checkbox" name="licht" id="_licht" onclick="blendInLichtSection()">
-                <label for="licht">Licht</label>
-                <br>
-                <input type="checkbox" name="ton" id="_ton" onclick="blendInTonSection()">
-                <label for="ton">Ton</label>
-                <br>
-                <input type="checkbox" name="praesentation" id="_praesentation" onclick="blendInPraesiSection()">
-                <label for="praesentation">Beamer (Präsentation, etc. )</label>
+                <input type="radio" id="_equipment" name="anlass" value="equipment" onclick="blendInEquipmentForm()">
+                <label for="_problem">Equipment ausleihen</label>
                 <p class="biggerbreak">
 
-                <section class="lichtsection" id="_lichtsection">
-                    <h1>Licht</h1>
-                    <label for="lichtkonzept">Beschreibung des Lichtkonzepts: </label>
-                    <br>
-                    <textarea name="lichtkonzept" id="_lichtkonzept" cols="30" rows="5"></textarea>
-                    <br>
-                    <label for="scheinwerfer">Welche Scheinwerfer werden benötigt?</label>
-                    <p class="semibreak">
+                <!--Problem/Defektmeldung-->
+                <section class="problemform" id="_problemform">
+                    <h1>Problem oder Defekt melden:</h1>
 
-                    <input type="checkbox" name="halogenstraher" id="_halogenstrahler">
-                    <label for="halogenstrahler">Halogenstrahler</label>
+                    <label for="raum">Raum: </label>
+                    <input type="number" name="raum" id="_raum">
                     <br>
-                    <img src="images/halogenstrahler.jpg" alt="Bild eines Halogenstrahlers" class="thumbnail">
-                    <p>*gut geeignet für statische, einfarbige Beleuchtung</p>
-                    <p class="semibreak">
-
-                    <input type="checkbox" name="movingheads" id="_movingheads">
-                    <label for="movingheads">Moving Heads</label>
+                    <label for="geraet">Gerät: </label>
+                    <select name="geraet" id="_geraet">
+                        <option value=""></option>
+                        <option value="appletv">Apple TV</option>
+                        <option value="beamer">Beamer</option>
+                        <option value="verbindung">Verbindung zu Beamer</option>
+                        <option value="dokumentenkamera">Dokumentenkamera</option>
+                    </select>
                     <br>
-                    <img src="images/movingheads.jpg" alt="Bild eines Movingheads" class="thumbnail">
-                    <p>*gut geeignet für komplexere Lichtkonzepte die Bewegung und Farben benötigen</p>
-                    <p class="semibreak">
+                    <label for="beschreibungproblem">Kurze Beschreibung des Problems:</label>
+                    <br>
+                    <textarea name="beschreibungproblem" id="_beschreibungproblem" cols="30" rows="5"></textarea>
+                    <br>
+                    <label for="deadline">Deadline (wenn vorhanden):</label>
+                    <input type="date" name="deadline" id="_deadline">
                 </section>
 
-                <section class="tonsection" id="_tonsection">
-                    <h1>Ton</h1>
-                    <label for="tonkonzept">Für was wird der Ton benötigt (Redner, Gesang, Instrument Abnahmen, Musik, Soundeffekte):</label>
-                    <br>
-                    <textarea name="tonkonzept" id="_tonkonzept" cols="30" rows=5"></textarea>
-                    <p class="semibreak">
-                    <label for="mikros">Welche Mikrofone werden benötigt?</label>
-                    <p class="semibreak">
+                <!--Equipment Ausleihe-->
+                <section class="equipmentform" id="_equipmentform">   
+                    <h1>Equipment ausleihen:</h1>  
 
-                    <input type="checkbox" name="kondensatormikro" id="_kondensatormikro">
-                    <label for="kondensatormikro">Kondensatormikrofone</label>
+                    <label for="ort">Für welchen Ort:</label>
+                    <input type="text" name="ort" id="_ort">
                     <br>
-                    <img src="images/kondensatormikro.jpg" alt="Bild eines Rode NT 1A" class="thumbnail">
-                    <p>*stationäres Mikrofon, gut für Instrument und Gruppen- und Gesangsaufnahmen <br>kabelgebunden, insgesamt 3 vorhanden)</p>
-                    <p class="semibreak">
-
-                    <input type="checkbox" name="sennheiserew100" id="_sennheiserew100">
-                    <label for="sennheiserew100">Hand- Funkmikrofon</label>
+                    <label for="equipment">Welches Equipment?</label>
+                    <select name="equipment" id="_equipment">
+                        <option value=""></option>
+                        <option value="soundanlage">Soundanlage</option>
+                        <option value="mikrofone">Mikrofone</option>
+                        <option value="halos">Halogenstrahler</option>
+                        <option value="kabel">Kabel</option>
+                    </select>
                     <br>
-                    <img src="images/sennheiserew100.jpg" alt="Bild eines Sennheiser EW 100" class="thumbnail">
-                    <p>*kabelloses Mikrofon, gut für Solistengesang und Sprache insgesamt 2 vorhanden)</p>
-                    <p class="semibreak">
-
-                    <input type="checkbox" name="shuresm58" id="_shuresm58">
-                    <label for="shuresm58">Kabelmikrofon</label>
+                    <label for="grundfuerausleihe">Wofür wird das Equipment benötigt?</label>
                     <br>
-                    <img src="images/shuresm58s.jpg" alt="Bild eines Shure SM58" class="thumbnail">
-                    <p>*kabelgebundenes Mikrofon, gut für Solistengesang und Sprache <br>
-                        (insgesamt nur zwei vorhanden, Bewegung nur eingeschränkt möglich)                          
-                    </p>
-                    <p class="semibreak">
-
-                    <input type="checkbox" name="c4" id="_c4">
-                    <label for="c4">Kleinmembran Kondensatormikrofone</label>
-                    <br>
-                    <img src="images/c4.jpg" alt="Bild eines C4" class="thumbnail">
-                    <p>*kabelgebundenes Mikrofon, besonders gut geeignet 
-                        für das Rednerpult und die Abnahme <br> von Streich- und Zupfinstrumenten 
-                        (insgesamt 2 vorhanden)                                                
-                    </p>
-                    <p class="semibreak">
-
-                    <input type="checkbox" name="lavalier" id="_lavalier">
-                    <label for="lavalier">Lavalier</label>
-                    <br>
-                    <img src="images/lavalier.jpg" alt="Bild eines Lavaliers" class="thumbnail">
-                    <p>*kabelloses Mikrofon welches an Kleidung befestigt werden kann. <br>
-                        Daher ist es besonders gut für Redner/Moderatoren geeignet.                                              
-                    </p>
-                    <p class="biggerbreak"> 
+                    <textarea name="grundfuerausleihe" id="_grundfuerausleihe" cols="30" rows="5"></textarea>
                 </section>
+                
+                <!--Veranstaltungsplanung-->
+                <section class="veranstaltugform" id="_veranstaltungform">
+                    <h1>Unterstützung in der Aula benötigt</h1>
 
-                <section class="praesisection" id="_praesisection">
-                    <h1>Beamer und Praesentation</h1>              
-                    <label for="praesivorhanden">Ist bereits eine Präsentation vorhanden?</label>
+                    <label for="artderveranstaltung">Art der Veranstaltung: </label>
+                    <input type="text" name="artderveranstaltung" id="_artderveranstaltung">
                     <br>
-                    <input type="radio" name="praesivorhanden" id="_praesivorhanden" value="ja">
-                    <label for="praesivorhanden">Ja</label>
+                    <label for="datum">Datum: </label>
+                    <input type="date" name="datum" id="_datum">
                     <br>
-                    <input type="radio" name="praesivorhanden" id="_praesivorhanden" value="nein">
-                    <label for="praesivorhanden">Nein</label>
+                    <label for="startzeit">Startzeit: </label>
+                    <input type="time" name="startzeit" id="_startzeit">
                     <br>
-                    <label for="praesi">Wenn eine Präsentation bereits vorhanden ist hier Link einfügen (z.B. Google Drive, Dropbox, etc.): </label>
+                    <label for="endzeit">Endzeit: </label>
+                    <input type="time" name="endzeit" id="_endzeit">
                     <br>
-                    <input type="text" name="praesi" id="_praesi">
-                </section>                
-            </section>
-            <p class="biggerbreak">
-            <label for="sonstiges">Sonstiges: </label>
-            <br>
-            <textarea name="sonstiges" id="_sonstiges" cols="30" rows=5"></textarea>
-            <p class="biggerbreak">
-            <input type="submit">
-        </form>
-        <p class="privacy">*um das Formular an uns weiterzuleiten nutzen wir den Dienst "formsubmit.co". Diese sammeln keine personenbezogenen Daten. 
-            Nähere Infos können hier nachgelesen werden: <a class="textlink" href="https://formsubmit.co/privacy.pdf">https://formsubmit.co/privacy.pdf</a></p>
-    </main>   
-</body>
+                    <label for="skript">Falls vorhanden, bitte eine Skript der Veranstaltung hier hochladen:</label>
+                    <br>
+                    <input type="file" name="skript" id="_skript">
+                    <br>
+                    <p>*maximal 25MB (viel mehr als ausreichend für die meisten PDF's)</p>
+
+                    <p class="biggerbreak">
+                    <label for="checkboxes"><b>Was wird benötigt: </b></label>
+                    <br>
+                    <input type="checkbox" name="licht" id="_licht" onclick="blendInLichtSection()">
+                    <label for="licht">Licht</label>
+                    <br>
+                    <input type="checkbox" name="ton" id="_ton" onclick="blendInTonSection()">
+                    <label for="ton">Ton</label>
+                    <br>
+                    <input type="checkbox" name="praesentation" id="_praesentation" onclick="blendInPraesiSection()">
+                    <label for="praesentation">Beamer (Präsentation, etc. )</label>
+                    <p class="biggerbreak">
+
+                    <section class="lichtsection" id="_lichtsection">
+                        <h1>Licht</h1>
+                        <label for="lichtkonzept">Beschreibung des Lichtkonzepts: </label>
+                        <br>
+                        <textarea name="lichtkonzept" id="_lichtkonzept" cols="30" rows="5"></textarea>
+                        <br>
+                        <label for="scheinwerfer">Welche Scheinwerfer werden benötigt?</label>
+                        <p class="semibreak">
+
+                        <input type="checkbox" name="halogenstraher" id="_halogenstrahler">
+                        <label for="halogenstrahler">Halogenstrahler</label>
+                        <br>
+                        <img src="images/halogenstrahler.jpg" alt="Bild eines Halogenstrahlers" class="thumbnail">
+                        <p>*gut geeignet für statische, einfarbige Beleuchtung</p>
+                        <p class="semibreak">
+
+                        <input type="checkbox" name="movingheads" id="_movingheads">
+                        <label for="movingheads">Moving Heads</label>
+                        <br>
+                        <img src="images/movingheads.jpg" alt="Bild eines Movingheads" class="thumbnail">
+                        <p>*gut geeignet für komplexere Lichtkonzepte die Bewegung und Farben benötigen</p>
+                        <p class="semibreak">
+                    </section>
+
+                    <section class="tonsection" id="_tonsection">
+                        <h1>Ton</h1>
+                        <label for="tonkonzept">Für was wird der Ton benötigt (Redner, Gesang, Instrument Abnahmen, Musik, Soundeffekte):</label>
+                        <br>
+                        <textarea name="tonkonzept" id="_tonkonzept" cols="30" rows=5"></textarea>
+                        <p class="semibreak">
+                        <label for="mikros">Welche Mikrofone werden benötigt?</label>
+                        <p class="semibreak">
+
+                        <input type="checkbox" name="kondensatormikro" id="_kondensatormikro">
+                        <label for="kondensatormikro">Kondensatormikrofone</label>
+                        <br>
+                        <img src="images/kondensatormikro.jpg" alt="Bild eines Rode NT 1A" class="thumbnail">
+                        <p>*stationäres Mikrofon, gut für Instrument und Gruppen- und Gesangsaufnahmen <br>kabelgebunden, insgesamt 3 vorhanden)</p>
+                        <p class="semibreak">
+
+                        <input type="checkbox" name="sennheiserew100" id="_sennheiserew100">
+                        <label for="sennheiserew100">Hand- Funkmikrofon</label>
+                        <br>
+                        <img src="images/sennheiserew100.jpg" alt="Bild eines Sennheiser EW 100" class="thumbnail">
+                        <p>*kabelloses Mikrofon, gut für Solistengesang und Sprache insgesamt 2 vorhanden)</p>
+                        <p class="semibreak">
+
+                        <input type="checkbox" name="shuresm58" id="_shuresm58">
+                        <label for="shuresm58">Kabelmikrofon</label>
+                        <br>
+                        <img src="images/shuresm58s.jpg" alt="Bild eines Shure SM58" class="thumbnail">
+                        <p>*kabelgebundenes Mikrofon, gut für Solistengesang und Sprache <br>
+                            (insgesamt nur zwei vorhanden, Bewegung nur eingeschränkt möglich)                          
+                        </p>
+                        <p class="semibreak">
+
+                        <input type="checkbox" name="c4" id="_c4">
+                        <label for="c4">Kleinmembran Kondensatormikrofone</label>
+                        <br>
+                        <img src="images/c4.jpg" alt="Bild eines C4" class="thumbnail">
+                        <p>*kabelgebundenes Mikrofon, besonders gut geeignet 
+                            für das Rednerpult und die Abnahme <br> von Streich- und Zupfinstrumenten 
+                            (insgesamt 2 vorhanden)                                                
+                        </p>
+                        <p class="semibreak">
+
+                        <input type="checkbox" name="lavalier" id="_lavalier">
+                        <label for="lavalier">Lavalier</label>
+                        <br>
+                        <img src="images/lavalier.jpg" alt="Bild eines Lavaliers" class="thumbnail">
+                        <p>*kabelloses Mikrofon welches an Kleidung befestigt werden kann. <br>
+                            Daher ist es besonders gut für Redner/Moderatoren geeignet.                                              
+                        </p>
+                        <p class="biggerbreak"> 
+                    </section>
+
+                    <section class="praesisection" id="_praesisection">
+                        <h1>Beamer und Praesentation</h1>              
+                        <label for="praesivorhanden">Ist bereits eine Präsentation vorhanden?</label>
+                        <br>
+                        <input type="radio" name="praesivorhanden" id="_praesivorhanden" value="ja">
+                        <label for="praesivorhanden">Ja</label>
+                        <br>
+                        <input type="radio" name="praesivorhanden" id="_praesivorhanden" value="nein">
+                        <label for="praesivorhanden">Nein</label>
+                        <br>
+                        <label for="praesi">Wenn eine Präsentation bereits vorhanden ist hier Link einfügen (z.B. Google Drive, Dropbox, etc.): </label>
+                        <br>
+                        <input type="text" name="praesi" id="_praesi">
+                    </section>                
+                </section>
+                <p class="biggerbreak">
+                <label for="sonstiges">Sonstiges: </label>
+                <br>
+                <textarea name="sonstiges" id="_sonstiges" cols="30" rows=5"></textarea>
+                <p class="biggerbreak">
+                <input type="submit">
+            </form>
+            <p class="privacy">*um das Formular an uns weiterzuleiten nutzen wir den Dienst "formsubmit.co". Diese sammeln keine personenbezogenen Daten. 
+                Nähere Infos können hier nachgelesen werden: <a class="textlink" href="https://formsubmit.co/privacy.pdf">https://formsubmit.co/privacy.pdf</a></p>
+        </main>   
+    </body>
 <script src="script.js"></script>
 </html>
