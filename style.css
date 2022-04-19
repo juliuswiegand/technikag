@@ -1,10 +1,5 @@
-@font-face {
-    font-family: Montserrat;
-    src: url(/fonts/Montserrat-VariableFont_wght.ttf);
-}
-
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 20pt;
     padding: 0;
 }
